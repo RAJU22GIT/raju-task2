@@ -1,0 +1,46 @@
+<mvc:View controllerName="rebikeproject2.controller.Loginpage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+   <App>
+    <pages>
+      <Page backgroundDesign="Solid">
+        <content>
+          <HBox class="mainBox">
+
+              <!-- Left corner  Logo -->
+            <VBox class="logoBox1">
+              <Image src="model/re2.jpg" width="150px" height="150px"/>
+            </VBox>
+
+            <!-- Left Logo -->
+            <VBox class="logoBox">
+              <Image src="model/royalenfield.jpg" width="500px" height="400px"/>
+            </VBox>
+          
+           <Button
+      text="LOGIN"
+      press=".onShowLogin"
+      class="loginMainButton"
+    />
+
+            <!-- Right Login Form -->
+          <VBox id="loginForm" visible="false" class="loginBox">
+
+      <Title text="LOGIN" class="loginTitle" />
+
+      <Input placeholder="Username" id="usernameInput" />
+      <Input placeholder="Password" type="Password" id="passwordInput" />
+
+      <CheckBox text="Show password" select=".onTogglePassword" id="showPwdCheck" />
+
+      <Button text="LOG IN" type="Emphasized" press=".onLoginPress" />
+      
+      <Link text="Forgot password?" class="forgotLink" />
+
+    </VBox>
+          </HBox>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

@@ -1,0 +1,49 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <!-- <VBox>
+        <SearchField
+            id="productSearch"
+            placeholder="Search Product Name"
+            liveChange="onLiveSearchProduct" />
+    </VBox> -->
+     <Table id="EmployeeTable" items="{productModel>/results}">
+     <headerToolbar>
+     <Toolbar >
+     <content>
+     <Title  text="Filter"></Title>
+     <ToolbarSpacer ></ToolbarSpacer>
+     <Button icon="sap-icon://sort" press="onSortPress"></Button>
+     <SearchField width="20rem" change="onsearchProducts    "></SearchField>
+     </content>
+     </Toolbar>
+     </headerToolbar>
+            <columns>
+                <Column>
+                    <Text text="Product Id"/>
+                </Column>
+                <Column>
+                    <Text text="Product Name"/>
+                </Column>
+                <Column>
+                    <Text text="SupplierID"/>
+                </Column>
+                <Column>
+                    <Text text="UnitPrice"/>
+                </Column>
+            </columns>
+    <items>
+        <ColumnListItem >
+        <cells>
+        <Text text="{productModel>ProductID}"/>
+        <Text text="{productModel>ProductName}"/>
+        <Text text="{productModel>SupplierID}"/>
+        <Text text="{productModel>UnitPrice}"/>
+ 
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+    </Page>
+</mvc:View>

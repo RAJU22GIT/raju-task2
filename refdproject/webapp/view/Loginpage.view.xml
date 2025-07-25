@@ -1,0 +1,46 @@
+<mvc:View controllerName="refdproject.controller.Loginpage"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <!-- <Page id="page" title="{i18n>title}"> -->
+
+    <App>
+    <pages>
+      <Page backgroundDesign="Solid">
+        <content>
+          <HBox class="mainBox">
+
+              <!-- Left corner  Logo -->
+            <VBox class="logoBox1">
+              <Image src="model/re2.jpg" width="150px" height="150px"/>
+            </VBox>
+
+            <!-- Left Logo -->
+            <VBox class="logoBox">
+              <Image src="model/royalenfield.jpg" width="500px" height="400px"/>
+            </VBox>
+          
+
+            <!-- Right Login Form -->
+            <VBox class="loginBox">
+              <Title text="LOGIN" level="H2" class="title"/>
+              <Input id="username" placeholder="Username" width="100%" />
+              <Input id="password" type="Password" placeholder="Password" width="100%" />
+              
+              <HBox alignItems="Center">
+                <CheckBox id="showPwd" text="Show password" select="onShowPassword"/>
+              </HBox>
+
+              <Button text="LOG IN" press="onLogin" class="loginBtn"/>
+              <Link text="Forgot password?" press="onForgotPassword"/>
+            </VBox>
+          </HBox>
+        </content>
+      </Page>
+    </pages>
+  </App>
+
+    <!-- </Page> -->
+
+
+
+</mvc:View>

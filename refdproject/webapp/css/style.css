@@ -1,0 +1,49 @@
+.mainBox {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 40px;
+    gap: 80px;
+  }
+  
+  .logoBox {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoBox1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+   
+  }
+  
+  .loginBox {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    background-color:black;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+    gap: 15px;
+
+  }
+  
+  .title {
+    color: #fdd835;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .loginBtn {
+    background-color: #fdd835 !important;
+    color: #000 !important;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .loginBtn:hover {
+    background-color: #ffe066 !important;
+  }
+  

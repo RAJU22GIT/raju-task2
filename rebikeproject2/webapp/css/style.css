@@ -1,0 +1,46 @@
+.mainBox {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 40px;
+    gap: 80px;
+  }
+  
+  .logoBox {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoBox1 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+   
+  }
+  
+  .loginMainButton {
+    position: absolute;
+    background-color: yellow;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .loginBox {
+    background-color: #000;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px yellow;
+    width: 300px;
+  }
+  
+  .loginTitle {
+    color: yellow;
+    margin-bottom: 20px;
+  }
+  
+  .forgotLink {
+    margin-top: 10px;
+    color: lightblue;
+  }
