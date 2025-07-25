@@ -14,7 +14,8 @@
      <content>
      <Title  text="Filter"></Title>
      <ToolbarSpacer ></ToolbarSpacer>
-     <Button icon="sap-icon://sort" press="onSortPress"></Button>
+     <Button text="SORT" press="onSortPress"></Button>
+     <!-- <Button icon="sap-icon://sort" press="onSortPress"></Button> -->
      <SearchField width="20rem" change="onsearchProducts    "></SearchField>
      </content>
      </Toolbar>
