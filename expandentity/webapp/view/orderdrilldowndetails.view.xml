@@ -3,5 +3,6 @@
     xmlns="sap.m">
     <Page id="page1" title="{i18n>title}" showNavButton="true" navButtonPress="onNavHead">
     <Title text="SECONDPAGE"></Title>
+    
         </Page>
 </mvc:View>

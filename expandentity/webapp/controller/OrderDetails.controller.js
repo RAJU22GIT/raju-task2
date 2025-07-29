@@ -7,7 +7,9 @@ sap.ui.define([
     return Controller.extend("demo.ladera.expandentity.controller.OrderDetails", {
        
         onInit() {
+            
         },
+       
         formatDate: function (sDate) {
             if (!sDate) return "";
             const oDate = new Date(sDate);
