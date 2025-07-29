@@ -1,0 +1,125 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "demo.ladera.expandentity",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.3",
+      "toolsId": "bc3d58cd-83e6-4f84-bdbd-8c65bd7d0324"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/v2/northwind/northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.138.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "demo.ladera.expandentity.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "demo.ladera.expandentity.view",
+        "async": true,
+        "viewPath": "demo.ladera.expandentity.view"
+      },
+      "routes": [
+        {
+          "name": "RouteOrderDetails",
+          "pattern": ":?query:",
+          "target": [
+            "TargetOrderDetails"
+          ]
+        },
+        {
+          "name": "RouteOrderDetails1",
+          "pattern": "drilldown/{OrderId}",
+          "target": [
+            "TargetOrderDetails1"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetOrderDetails": {
+          "id": "OrderDetails",
+          "name": "OrderDetails"
+        },
+        "TargetOrderDetails1": {
+          "id": "OrderDetails1",
+          "name": "orderdrilldowndetails"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "demo.ladera.expandentity.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}
