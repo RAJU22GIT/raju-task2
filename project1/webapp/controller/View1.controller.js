@@ -3,7 +3,7 @@ sap.ui.define([
      "sap/m/MessageBox",
      "sap/ui/model/Filter",
      "sap/ui/model/FilterOperator"
-], (Controller, MessageBox, Filter, FilterOperator) => {
+], (Controller, MessageBox) => {
     "use strict";
 
     return Controller.extend("project1.controller.View1", {
