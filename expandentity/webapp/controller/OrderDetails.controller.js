@@ -21,8 +21,7 @@ sap.ui.define([
         onshowNav(evt) {
             var oselected = evt.getSource().getBindingContext().getProperty().OrderID;
             var odetailRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            odetailRouter.navTo("RouteOrderDetails1",
-                {OrderId : oselected}
+            odetailRouter.navTo("RouteOrderDetails1", {OrderId : oselected}
 
             );
 
