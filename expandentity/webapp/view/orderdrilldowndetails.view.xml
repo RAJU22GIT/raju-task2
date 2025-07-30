@@ -1,8 +1,35 @@
-<mvc:View controllerName="demo.ladera.expandentity.controller.orderdrilldowndetails"
+<mvc:View xmlns:table="sap.ui.table" controllerName="demo.ladera.expandentity.controller.orderdrilldowndetails"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
     xmlns="sap.m">
     <Page id="page1" title="{i18n>title}" showNavButton="true" navButtonPress="onNavHead">
     <Title text="SECONDPAGE"></Title>
+    <f:SimpleForm >
+<f:content>
+      <Title text="Customer Details" />
+    <Label text = "Customer Id"/>
+    <Input value = "{model>/CustomerID}" />
+    <Label text = "Address"/>
+    <Input value = "{model>/Customer/Address}" />
+    <Label text = "City"/>
+    <Input value = "{model>/Customer/City}" />
+    <Label text = "Country"/>
+    <Input value = "{model>/Customer/Country}" />
+    <Label text = "ContactName"/>
+    <Input value = "{model>/Customer/ContactName}" />
+    </f:content>
+    </f:SimpleForm>
+
+    <f:SimpleForm >
+    <f:content>
+    <Title text="Employee Details" />
+     <Label text = "Employee ID"/>
+    <Input value = "{model>/EmployeeID}" />
+    <Label text = "Freight"/>
+    <Input value = "{model>/Freight}" />
+    </f:content>
+    </f:SimpleForm>
     
+   
         </Page>
 </mvc:View>
