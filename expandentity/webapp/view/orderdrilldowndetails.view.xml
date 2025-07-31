@@ -29,7 +29,14 @@
     <Input value = "{model>/Freight}" />
     </f:content>
     </f:SimpleForm>
+
+    <List  items="{model>/Order_Details/results}" headerText="Order Details">
     
+     <StandardListItem
+                title="{model>OrderID}" 
+                description="{model>ProductID}"/>
+               
+    </List>
    
         </Page>
 </mvc:View>
