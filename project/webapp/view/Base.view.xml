@@ -1,0 +1,30 @@
+<mvc:View controllerName="project.controller.Base"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Table id="EmployeeTable" items="{/PurchaseOrderHeaderSet}">
+   
+            <columns>
+                <Column>
+                    <Text text="PurchasingDocumentNumber"/>
+                </Column>
+                <Column>
+                    <Text text="DocumentCategory"/>
+                </Column>
+                <Column>
+                    <Text text="CompanyCode"/>
+                </Column>
+            </columns>
+    <items>
+        <ColumnListItem >
+        <cells>
+        <Text text="{PurchasingDocumentNumber}"/>
+        <Text text="{DocumentCategory}"/>
+        <Text text="{CompanyCode}"/>
+ 
+        </cells>
+        </ColumnListItem>
+    </items>
+    </Table>
+    </Page>
+</mvc:View>
